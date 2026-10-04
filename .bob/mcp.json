@@ -2,7 +2,7 @@
   "mcpServers": {
     "dio-explorer": {
       "command": "node",
-      "args": ["${workspaceFolder}/projeto_final_dio_formacao_bob/dio_explorer/mcp/build/index.js"],
+      "args": ["${workspaceFolder}/dio_explorer/mcp/build/index.js"],
       "env": {
         "DIO_API_KEY": "${env:DIO_API_KEY}",
         "DIO_JWT_SECRET": "${env:DIO_JWT_SECRET}",

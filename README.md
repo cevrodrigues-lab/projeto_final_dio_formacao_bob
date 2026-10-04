@@ -92,9 +92,16 @@ O Bob atua como **orquestrador**: quando uma Skill é ativada, ela instrui o Bob
 ## Estrutura de Arquivos
 
 ```
-projeto_final_dio_formacao_bob/
+(raiz do workspace)
 ├── Hello_World.md                    ← Primeiro arquivo do projeto
 ├── test_results.txt                  ← Relatório de testes (67/67 PASS)
+├── README.md                         ← Este arquivo
+├── .bob/
+│   ├── mcp.json                      ← Registro do MCP Server no Bob
+│   └── skills/
+│       ├── trilha/SKILL.md
+│       ├── desafio/SKILL.md
+│       └── certificado/SKILL.md
 └── dio_explorer/
     ├── data/
     │   └── trilhas_dio.json          ← Base de dados (10 trilhas)
@@ -109,14 +116,6 @@ projeto_final_dio_formacao_bob/
         ├── package.json
         ├── tsconfig.json
         └── README.md
-
-# Skills (na raiz do workspace .bob/)
-.bob/
-├── mcp.json                          ← Registro do MCP Server no Bob
-└── skills/
-    ├── trilha/SKILL.md
-    ├── desafio/SKILL.md
-    └── certificado/SKILL.md
 ```
 
 ---
@@ -170,7 +169,7 @@ Emite um certificado fictício de conclusão com ID único no formato `DIO-YYYY-
 ### 1. Instalar dependências e compilar
 
 ```bash
-cd projeto_final_dio_formacao_bob/dio_explorer/mcp
+cd dio_explorer/mcp
 npm install
 npm run build
 ```
@@ -184,7 +183,7 @@ Verifique se `.bob/mcp.json` contém:
   "mcpServers": {
     "dio-explorer": {
       "command": "node",
-      "args": ["${workspaceFolder}/projeto_final_dio_formacao_bob/dio_explorer/mcp/build/index.js"]
+      "args": ["${workspaceFolder}/dio_explorer/mcp/build/index.js"]
     }
   }
 }
